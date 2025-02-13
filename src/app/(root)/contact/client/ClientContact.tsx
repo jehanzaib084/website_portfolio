@@ -15,7 +15,6 @@ export default function ClientContact() {
     firstName: "",
     lastName: "",
     email: "",
-    budget: "",
     message: "",
   });
   const [isSending, setIsSending] = useState(false);
@@ -55,7 +54,6 @@ export default function ClientContact() {
         firstName: "",
         lastName: "",
         email: "",
-        budget: "",
         message: "",
       });
       setIsSending(false);
@@ -162,7 +160,7 @@ export default function ClientContact() {
             />
           </div>
 
-          <div className="mb-6 w-full">
+          {/* <div className="mb-6 w-full">
             <label htmlFor="budget" className="block font-bold">
               Your Budget
             </label>
@@ -193,7 +191,7 @@ export default function ClientContact() {
                 <option value="More than 10k">More than 10k</option>
               </select>
             </div>
-          </div>
+          </div> */}
 
           <div className="mb-6 w-full">
             <label htmlFor="message" className="font-bold">
