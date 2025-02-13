@@ -13,7 +13,6 @@ import Projects from "./components/HomeComp/Projects/Projects";
 import AnimatedSlide from "./components/HomeComp/Projects/Swiper";
 // import TechStacks from "./components/TechStacks";
 import Articles from "./components/HomeComp/Articles";
-import Swiper from "swiper";
 
 const Preloader = function () {
   return (
