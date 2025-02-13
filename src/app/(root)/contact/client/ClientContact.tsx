@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser"; // Import EmailJS
 
 function hasEmptyStrings(obj: any) {
   return Object.values(obj).some((value) => value === "");
@@ -38,18 +39,18 @@ export default function ClientContact() {
     try {
       setIsSending(true);
       toast.info("Sending message, please wait...");
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_ENDPOINT}/sendMail`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        },
+
+      // Initialize EmailJS
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        formData,
       );
-      const data = await response.json();
-      toast.success(data.message);
+
+      toast.success("Message sent successfully!");
       setFormData({
         firstName: "",
         lastName: "",
@@ -58,7 +59,7 @@ export default function ClientContact() {
         message: "",
       });
       setIsSending(false);
-    } catch (error) {
+    } catch (error: any) {
       setIsSending(false);
       toast.error("Error sending message, please try again!");
     }
