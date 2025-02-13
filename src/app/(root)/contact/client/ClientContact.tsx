@@ -66,22 +66,22 @@ export default function ClientContact() {
 
   return (
     <section>
-      <div className="container mx-auto mt-[80px] flex flex-col justify-between gap-10 px-5 pt-5 lg:px-20 xl:flex-row">
+      <div className="container text-white mx-auto mt-[80px] flex flex-col justify-between gap-10 px-5 pt-5 lg:px-20 xl:flex-row">
         <div className="xl:w-[40%]">
           <h2 className="text-[37px] font-bold md:text-[56px]">Get in touch</h2>
-          <p className="mb-10 mt-8 text-lg text-[#5c5c5c] md:text-xl">
+          <p className="mb-10 mt-8 text-lg text-[#CACACAFF] md:text-xl">
             Have a project in mind? Looking to partner or work together? Reach
             out through the form and I'll get back to you in the next 48 hours.
           </p>
           <Link
             href="mailto:officialayo540@gmail.com"
-            className="mb-4 flex items-center gap-2 text-xl font-bold text-[#5c5c5c]"
+            className="mb-4 flex items-center gap-2 text-xl font-bold text-[#CACACAFF]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="#5c5c5c"
+              fill="#CACACAFF"
               className="bi bi-envelope"
               viewBox="0 0 16 16"
             >
@@ -91,13 +91,13 @@ export default function ClientContact() {
           </Link>
           <Link
             href="tel:+2347089111679"
-            className="mb-8 flex items-center gap-2 text-xl font-bold text-[#5c5c5c]"
+            className="mb-8 flex items-center gap-2 text-xl font-bold text-[#CACACAFF]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="#5c5c5c"
+              fill="#CACACAFF"
               className="bi bi-telephone"
               viewBox="0 0 16 16"
             >
@@ -217,7 +217,7 @@ export default function ClientContact() {
               whileHover={{ right: 0, bottom: 0 }}
               disabled={isSending}
               aria-label={isSending ? "Sending message" : "Send message"}
-              className="absolute h-[60px] w-[200px] bg-black text-lg font-medium text-white"
+              className="absolute h-[60px] w-[200px] bg-white text-lg font-medium text-black"
             >
               {isSending ? "Submitting..." : "Submit Now!"}
             </motion.button>

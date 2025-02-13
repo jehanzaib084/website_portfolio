@@ -12,7 +12,7 @@ import GradientTxt from "./components/Reusables/GradientTxt";
 import Projects from "./components/HomeComp/Projects/Projects";
 import AnimatedSlide from "./components/HomeComp/Projects/Swiper";
 // import TechStacks from "./components/TechStacks";
-import Articles from "./components/HomeComp/Articles";
+// import Articles from "./components/HomeComp/Articles";
 
 const Preloader = function () {
   return (
@@ -80,12 +80,14 @@ export default function ClientHome() {
             {/* <TechStacks /> */}
             <div className="container mx-auto px-5 pt-5 lg:px-20">
               <Services />
+            </div>
+            <div className="container bg-black mx-auto px-5 pt-5 pb-10 lg:px-20">
               <Projects />
+              <div className="relative h-[560px]">
+                <AnimatedSlide />
+              </div>
             </div>
-            <div className="relative h-[400px]">
-              <AnimatedSlide />
-            </div>
-            <Articles />
+            {/* <Articles /> */}
             <OtherComponents />
           </main>
           <Footer key="footer" />

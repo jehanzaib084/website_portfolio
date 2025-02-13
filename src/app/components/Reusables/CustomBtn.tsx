@@ -13,12 +13,12 @@ export default function CustomBtn({ className, txt, href }: CustomBtnProps) {
   return (
     <Link href={href}>
       <div
-        className={`relative h-[60px] bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 ${className}`}
+        className={`relative h-[60px]  bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 ${className}`}
       >
         <motion.button
           initial={{ right: "8px", bottom: "8px" }}
           whileHover={{ right: 0, bottom: 0 }}
-          className={`absolute h-[60px] bg-black text-lg font-medium text-white ${className}`}
+          className={`absolute h-[60px] bg-black text-lg font-medium text-white border border-white ${className}`}
         >
           {txt}
         </motion.button>

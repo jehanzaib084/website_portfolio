@@ -39,27 +39,35 @@ export default function ProfileInfo() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="grid gap-4"
+        className="grid grid-cols-4 gap-4 h-[600px]"
       >
         <Image
           src={profImage4}
           alt="image"
-          className="col-span-2 w-full xl:col-start-2 xl:col-end-4 xl:row-start-1 xl:row-end-3 xl:h-full xl:w-auto"
+          width={600}
+          height={400}
+          className="col-span-2 w-full h-full xl:col-start-2 xl:col-end-4 xl:row-start-1 xl:row-end-3 object-cover"
         />
         <Image
           src={profImage3}
           alt="image"
-          className="col-span-1 w-full xl:col-span-1 xl:col-start-4 xl:row-start-1 xl:row-end-2 xl:h-full xl:w-auto"
+          width={300}
+          height={200}
+          className="col-span-1 w-full h-full xl:col-span-1 xl:col-start-4 xl:row-start-1 xl:row-end-2 object-cover"
         />
         <Image
           src={profImage2}
           alt="image"
-          className="col-span-1 w-full xl:col-span-1 xl:col-start-4 xl:row-start-2 xl:row-end-3 xl:h-full xl:w-auto xl:object-cover"
+          width={300}
+          height={200}
+          className="col-span-1 w-full h-full xl:col-span-1 xl:col-start-4 xl:row-start-2 xl:row-end-3 object-cover"
         />
         <Image
           src={profImage}
           alt="image"
-          className="col-span-2 w-full xl:col-span-1 xl:col-start-1 xl:row-span-2 xl:row-start-1 xl:row-end-3 xl:aspect-9/16 xl:h-full xl:w-auto xl:object-cover"
+          width={300}
+          height={600}
+          className="col-span-2 w-full h-full xl:col-span-1 xl:col-start-1 xl:row-span-2 xl:row-start-1 xl:row-end-3 object-cover"
         />
       </motion.div>
     </section>

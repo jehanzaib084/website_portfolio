@@ -8,7 +8,7 @@ export default function OtherComponents() {
       <div className="container mx-auto px-5 py-[80px] lg:px-20">
         <ProfileInfo />
         <EducationSect />
-        <Testimonials />
+        {/* <Testimonials /> */}
       </div>
     </section>
   );

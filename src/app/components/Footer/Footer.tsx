@@ -2,6 +2,7 @@ import FadeUp from "@/animations/FadeUp";
 import GradientTxt from "../Reusables/GradientTxt";
 import ContactDetails from "./Contact/Contact";
 import FAQ from "./FAQ/FAQ";
+import ClientContact from "@/app/(root)/contact/client/ClientContact";
 
 export default function Footer() {
   return (
@@ -19,6 +20,10 @@ export default function Footer() {
         </FadeUp>
 
         <FAQ />
+        <FadeUp tag="div" className="pt-20">
+          <ClientContact />
+        </FadeUp>
+
         <ContactDetails />
       </div>
     </footer>

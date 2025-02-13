@@ -53,7 +53,7 @@ export default function ContactDetails() {
   ];
 
   return (
-    <section className="pt-[80px] xl:pt-[300px]">
+    <section className="pt-[80px] xl:pt-[160px]">
       <FadeUp tag="div" className="mb-8">
         <h2 className="text-[36px] font-bold tracking-[0.5px] text-white md:text-[50px] xl:text-[54px]">
           Ready to create something amazing?
@@ -68,10 +68,10 @@ export default function ContactDetails() {
       <div className="flex flex-col xl:flex-row xl:justify-between">
         <div>
           <h2 className="font-medium italic text-white sm:text-base md:text-[24px] lg:font-bold">
-            {" <React"}
-            <GradientTxt tagName="span" txt="Mode />." />
+            {" <ML-"}
+            <GradientTxt tagName="span" txt="Engineer />." />
           </h2>
-          <p className="py-2 text-[#8a95ad]">Lagos, Nigeria</p>
+          <p className="py-2 text-[#8a95ad]">Lahore, Pakistan</p>
           <div className="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ export default function ContactDetails() {
 
       <p className="pb-10 pt-[100px] text-center text-[#8a95ad]">
         Copyright &copy; {date}{" "}
-        <GradientTxt tagName="span" txt="<ReactMode/>." /> all rights reserved.
+        <GradientTxt tagName="span" txt="<ML-Engineer/>." /> all rights reserved.
         Built using NextJS, Typescript, TailwindCSS, Framer motion, Sanity and
         NodeJS.
       </p>

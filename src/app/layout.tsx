@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/icon.png" sizes="32" />
+        <link rel="icon" href="/public/test_image.jpg" sizes="32" />
       </head>
       <body suppressHydrationWarning>
         {children}

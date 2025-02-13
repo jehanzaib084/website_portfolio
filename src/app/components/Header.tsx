@@ -54,12 +54,12 @@ export default function Header() {
               >
                 Projects
               </Link>
-              <Link
+              {/* <Link
                 href="/articles"
                 className={`my-5 transition-opacity duration-75 ${pathname.includes("/articles") ? "opacity-50" : "hover:opacity-50"}`}
               >
                 Articles
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className={`my-5 flex items-center gap-3 transition-opacity duration-75 ${pathname === "/contact" ? "opacity-50" : "hover:opacity-50"}`}
