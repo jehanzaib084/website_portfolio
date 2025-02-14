@@ -61,7 +61,7 @@ export default function Header() {
                 Articles
               </Link> */}
               <Link
-                href="/contact"
+                href="/#contact"
                 className={`my-5 flex items-center gap-3 transition-opacity duration-75 ${pathname === "/contact" ? "opacity-50" : "hover:opacity-50"}`}
               >
                 <span>Book a call</span>
@@ -120,15 +120,15 @@ export default function Header() {
               >
                 Projects
               </Link>
-              <Link
+              {/* <Link
                 href="/articles"
                 className={`my-5 transition-opacity duration-75 ${pathname.includes("/articles") ? "opacity-50" : "hover:opacity-50"}`}
                 onClick={() => setIsNavClicked(false)}
               >
                 Articles
-              </Link>
+              </Link> */}
               <Link
-                href="/contact"
+                href="/#contact"
                 className={`my-5 flex items-center gap-2 transition-opacity duration-75 ${pathname === "/contact" ? "opacity-50" : "hover:opacity-50"}`}
                 onClick={() => setIsNavClicked(false)}
               >

@@ -23,13 +23,13 @@ export default function ContactDetails() {
 
     {
       name: "Contact",
-      path: "/contact",
+      path: "/#contact",
     },
 
-    {
-      name: "Articles",
-      path: "/articles",
-    },
+    // {
+    //   name: "Articles",
+    //   path: "/articles",
+    // },
 
     {
       name: "Projects",

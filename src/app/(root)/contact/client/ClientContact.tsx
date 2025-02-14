@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser"; // Import EmailJS
+import FadeUp from "@/animations/FadeUp";
 
 function hasEmptyStrings(obj: any) {
   return Object.values(obj).some((value) => value === "");
@@ -64,7 +65,10 @@ export default function ClientContact() {
   };
 
   return (
-    <section>
+    <section id="contact">
+      <FadeUp tag="div">
+
+      
       <div className="container text-white mx-auto mt-[80px] flex flex-col justify-between gap-10 px-5 pt-5 lg:px-20 xl:flex-row">
         <div className="xl:w-[40%]">
           <h2 className="text-[37px] font-bold md:text-[56px]">Get in touch</h2>
@@ -223,6 +227,7 @@ export default function ClientContact() {
           </div>
         </form>
       </div>
+      </FadeUp>
     </section>
   );
 }
