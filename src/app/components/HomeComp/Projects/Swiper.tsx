@@ -1,4 +1,3 @@
-// filepath: /D:/Jehanzaib_Data/web_dev/website_portfolio/src/app/components/HomeComp/Projects/Swiper.tsx
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,18 +38,11 @@ export default function AnimatedSlide() {
 
   return (
     <>
-      <div className="absolute mt-[10px] mb-[80px] w-full cursor-pointer xl:right-0">
+      <div className="absolute mt-[20px] w-full cursor-pointer xl:right-0">
         <Swiper
           key={projects.length}
           modules={[Autoplay, Navigation]}
           loop={true}
-          navigation={{
-            // Enable navigation
-            enabled: true,
-            // Use custom navigation elements
-            prevEl: '#swiper-button-prev',
-            nextEl: '#swiper-button-next',
-          }}
           breakpoints={{
             300: {
               slidesPerView: 1,
@@ -72,7 +64,7 @@ export default function AnimatedSlide() {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {projects.length > 0 &&
+          {projects.length > 1 &&
             projects.map((project) => (
               <SwiperSlide
                 key={project._id}
@@ -108,9 +100,8 @@ export default function AnimatedSlide() {
         </Swiper>
       </div>
 
-      <div className="absolute bottom-0 right-5 ml-auto mt-2 flex items-center gap-4 lg:right-0">
+      <div className="absolute -bottom-[90px] right-5 ml-auto mt-4 flex items-center gap-4 lg:-bottom-[0px] lg:right-40">
         <div
-          id="swiper-button-prev"
           className="flex size-[60px] cursor-pointer items-center justify-center bg-white"
           onClick={() => swiperRef.current?.slidePrev()}
         >
@@ -130,7 +121,6 @@ export default function AnimatedSlide() {
         </div>
 
         <div
-          id="swiper-button-next"
           className="flex size-[60px] cursor-pointer items-center justify-center bg-white"
           onClick={() => swiperRef.current?.slideNext()}
         >

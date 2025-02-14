@@ -81,9 +81,9 @@ export default function ClientHome() {
             <div className="container mx-auto px-5 pt-5 lg:px-20">
               <Services />
             </div>
-            <div className="container bg-black mx-auto px-5 pt-5 pb-10 lg:px-20">
+            <div className="container bg-black mx-auto pt-5 pb-[140px] lg:pb-[80px]">
               <Projects />
-              <div className="relative h-[560px]">
+              <div className="relative h-[600px]">
                 <AnimatedSlide />
               </div>
             </div>
