@@ -39,7 +39,7 @@ export default function ProfileInfo() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="grid grid-cols-4 gap-4 h-[600px]"
+        className="grid xl:grid-cols-4 gap-4 xl:h-[600px]"
       >
         <Image
           src={profImage4}
