@@ -1,22 +1,14 @@
-# My Professional Portfolio
+# Professional Portfolio Project
 
 > [!Welcome]
-> Welcome to my professional portfolio repository! This project showcases my journey, skills, and projects as a fullstack developer. It serves as a central repository for all my work, experiences, and achievements in web development.
+> Welcome to my Portfolio Project.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Content Management](#content-management)
-- [Contact](#contact)
-
-### Introduction
-
-This portfolio is designed to showcase my projects, skills, and experiences in web development. It highlights my proficiency in frontend and backend technologies, my approach to creating user-centered designs, and my continuous learning journey.
 
 ### Features
 
@@ -97,11 +89,3 @@ All project data, testimonials, pictures, FAQs, and other content are managed an
 - Add or update the content as needed.
 
 - Save and publish the changes.
-
-### Contact
-
-If you have any questions, suggestions, or feedback, feel free to reach out to me:
-
-Email: officialayo540@gmail.com
-[LinkedIn](https://linkedin.com/in/ayo540)
-X: @officialayo540
