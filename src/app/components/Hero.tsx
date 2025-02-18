@@ -50,7 +50,7 @@ export default function Hero() {
               href={profile.resume}
               target="_blank"
               rel="noopener noreferrer"
-              download="Abdullah_Resume.pdf"
+              download="Sania_Resume.pdf"
               className="group flex cursor-pointer items-center gap-2 text-lg font-bold"
             >
               <span>Download CV</span>
@@ -79,13 +79,13 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           src={profile.profileImage}
           alt={profile.alt || "profile image"}
-          width={1200}
-          height={1200}
-          className="mx-auto w-full rounded-full lg:w-[400px]"
+          width={400}
+          height={400}
+          className="mx-auto aspect-square w-[300px] rounded-full object-cover lg:w-[400px]"
           priority
         />
       ) : (
-        <div className="mx-auto h-[300px] w-[300px] animate-pulse rounded-full bg-gray-200 lg:h-[400px] lg:w-[400px]" />
+        <div className="mx-auto aspect-square w-[300px] animate-pulse rounded-full bg-gray-200 lg:w-[500px]" />
       )}
     </section>
   );

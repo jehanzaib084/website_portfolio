@@ -11,8 +11,6 @@ import Footer from "./components/Footer/Footer";
 import GradientTxt from "./components/Reusables/GradientTxt";
 import Projects from "./components/HomeComp/Projects/Projects";
 import AnimatedSlide from "./components/HomeComp/Projects/Swiper";
-// import TechStacks from "./components/TechStacks";
-// import Articles from "./components/HomeComp/Articles";
 
 const Preloader = function () {
   return (
@@ -77,19 +75,17 @@ export default function ClientHome() {
             <div className="container mx-auto px-5 pt-5 lg:px-20">
               <Hero />
             </div>
-            {/* <TechStacks /> */}
             <div className="container mx-auto px-5 pt-5 lg:px-20">
               <Services />
             </div>
             <div className="bg-black">
-              <div className="container mx-auto pt-5 pb-[140px] lg:pb-[80px]">
+              <div className="container mx-auto pt-5 pb-[140px] lg:pb-[100px]">
                 <Projects />
                 <div className="relative h-[600px]">
                   <AnimatedSlide />
                 </div>
               </div>
             </div>
-            {/* <Articles /> */}
             <OtherComponents />
           </main>
           <Footer key="footer" />

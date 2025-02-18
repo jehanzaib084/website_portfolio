@@ -1,25 +1,24 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { Swiper as SwiperType } from "swiper";
+import { useEffect, useState, useRef } from "react";
 import GradientTxt from "../../Reusables/GradientTxt";
 import CustomNav from "../../Reusables/CustomNav";
 import type { Project } from "../../../../../types/Project";
 import { useRouter } from "next/navigation";
-import { Autoplay, Navigation } from "swiper/modules";
 import { getProjects } from "../../../../../sanity/sanity-utils";
 import { toast } from "react-toastify";
 
 export default function AnimatedSlide() {
   const router = useRouter();
-  const swiperRef = useRef<SwiperType | null>(null);
   const [projects, setProjects] = useState<Project[]>([]);
+  const sliderRef = useRef<Slider>(null);
 
   useEffect(() => {
-    //? fetch projects
+    // Fetch projects
     const fetch = async function () {
       try {
         const projects = await getProjects();
@@ -36,74 +35,79 @@ export default function AnimatedSlide() {
     router.push(`/projects/${slug}`);
   };
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false, // Disable default arrows
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <>
-      <div className="absolute mt-[20px] w-full cursor-pointer xl:right-0">
-        <Swiper
-          key={projects.length}
-          modules={[Autoplay, Navigation]}
-          loop={true}
-          breakpoints={{
-            300: {
-              slidesPerView: 1,
-            },
+    <div className="relative w-full">
+      <Slider ref={sliderRef} {...settings}>
+        {projects.length > 1 &&
+          projects.map((project) => (
+            <div
+              key={project._id}
+              className="group md:min-w-[400px] p-2" // Add padding for margin between slides
+              onClick={() => handleNavigation(project.slug)}
+            >
+              <div className="w-full overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.alt}
+                  width={400}
+                  height={350}
+                  priority
+                  className="w-full transition-transform duration-300 group-hover:scale-[1.1] md:max-h-[273px]"
+                />
+              </div>
+              <div className="bg-white p-10">
+                <GradientTxt
+                  txt={project.title}
+                  className="text-[14px] font-bold tracking-[4px]"
+                  tagName="h5"
+                />
+                <h4 className="my-6 truncate text-[19px] font-bold leading-[110%] transition-opacity duration-300 group-hover:opacity-50">
+                  {project.tagline}
+                </h4>
+                <CustomNav
+                  txt="View Project"
+                  className="flex items-center gap-2 text-[14px] transition-opacity duration-300 group-hover:opacity-50"
+                />
+              </div>
+            </div>
+          ))}
+      </Slider>
 
-            600: {
-              slidesPerView: 2,
-            },
-
-            900: {
-              slidesPerView: 3,
-            },
-
-            1200: {
-              slidesPerView: 4,
-            },
-          }}
-          spaceBetween={20}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-        >
-          {projects.length > 1 &&
-            projects.map((project) => (
-              <SwiperSlide
-                key={project._id}
-                className="group md:min-w-[400px]"
-                onClick={() => handleNavigation(project.slug)}
-              >
-                <div className="w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.alt}
-                    width={400}
-                    height={350}
-                    priority
-                    className="w-full transition-transform duration-300 group-hover:scale-[1.1] md:max-h-[273px]"
-                  />
-                </div>
-                <div className="bg-white p-10">
-                  <GradientTxt
-                    txt={project.title}
-                    className="text-[14px] font-bold tracking-[4px]"
-                    tagName="h5"
-                  />
-                  <h4 className="my-6 truncate text-[19px] font-bold leading-[110%] transition-opacity duration-300 group-hover:opacity-50">
-                    {project.tagline}
-                  </h4>
-                  <CustomNav
-                    txt="View Project"
-                    className="flex items-center gap-2 text-[14px] transition-opacity duration-300 group-hover:opacity-50"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-        </Swiper>
-      </div>
-
-      <div className="absolute -bottom-[90px] right-5 ml-auto mt-4 flex items-center gap-4 lg:-bottom-[0px] lg:right-40">
+      <div className="absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 flex items-center gap-4">
         <div
-          className="flex size-[60px] cursor-pointer items-center justify-center bg-white"
-          onClick={() => swiperRef.current?.slidePrev()}
+          className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center bg-white"
+          onClick={() => sliderRef.current?.slickPrev()}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -121,8 +125,8 @@ export default function AnimatedSlide() {
         </div>
 
         <div
-          className="flex size-[60px] cursor-pointer items-center justify-center bg-white"
-          onClick={() => swiperRef.current?.slideNext()}
+          className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center bg-white"
+          onClick={() => sliderRef.current?.slickNext()}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -139,6 +143,6 @@ export default function AnimatedSlide() {
           </svg>
         </div>
       </div>
-    </>
+    </div>
   );
 }
