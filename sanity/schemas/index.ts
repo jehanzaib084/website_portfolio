@@ -12,9 +12,9 @@ const schemas = [
   Services,
   Experiences,
   FAQ,
-  Testimonials,
+  // Testimonials,
   Projects,
-  Articles,
+  // Articles,
   Profile,
 ];
 
