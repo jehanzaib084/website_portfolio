@@ -6,6 +6,7 @@ import type { Education, Work } from "../types/Experience";
 import type { FAQ } from "../types/FAQ";
 import type { Testimonials } from "../types/Testimonials";
 import { ArticleProps } from "../types/Articles";
+import { Profile } from "../types/Profile";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
@@ -188,5 +189,16 @@ export async function getArticle(slug: string): Promise<ArticleProps> {
     "estimatedReadingTime": round(length(pt::text(content)) / 5 / 225 )
     }`,
     { slug },
+  );
+}
+
+export async function getProfile(): Promise<Profile> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "profile"][0]{
+      _id,
+      "profileImage": profileImage.asset->url,
+      "alt": profileImage.alt,
+      "resume": resume.asset->url
+    }`
   );
 }

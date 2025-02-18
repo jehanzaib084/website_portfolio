@@ -41,12 +41,12 @@ export default function ClientContact() {
       toast.info("Sending message, please wait...");
 
       // Initialize EmailJS
-      emailjs.init("qiVCNMyxOXtR1kZPA"); // Replace with your EmailJS public key
+      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string);
 
       // Send email using EmailJS
       const response = await emailjs.send(
-        "service_exs1123", // Replace with your EmailJS service ID
-        "template_23zuv7e", // Replace with your EmailJS template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
         formData,
       );
 
