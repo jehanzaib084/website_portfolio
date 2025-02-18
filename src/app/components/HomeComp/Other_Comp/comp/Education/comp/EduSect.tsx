@@ -21,7 +21,7 @@ export default function EduSect({
   return (
     <FadeUp
       tag="div"
-      className="group relative flex cursor-pointer flex-col justify-between gap-4 border-b border-black pb-10 xl:flex-row xl:items-end"
+      className="group relative flex cursor-pointer flex-col justify-between gap-4 border-b border-black dark:border-white pb-10 xl:flex-row xl:items-end"
     >
       <div className={`${type === "work" && "flex items-center gap-4"}`}>
         {type === "work" ? (

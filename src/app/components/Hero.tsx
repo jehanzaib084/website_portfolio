@@ -35,12 +35,12 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="mb-4 text-[40px] font-bold leading-[110%] md:text-[68px] lg:text-[70px]">
-          <GradientTxt tagName="span" txt="I develop fullstack" /> solutions
-          that delight and inspire users.
+          <GradientTxt tagName="span" txt="AI That Works Smarter," />
+          So You Don’t Have To.
         </h1>
 
         <p className="mb-16 text-[19px] text-[#666] lg:text-[22px]">
-          Hi! I'm Abdullah, a Fullstack Web Developer based in Nigeria. I create user-friendly interfaces for fast-growing startups.
+          Hi! I'm Sania, an AI & ML Engineer specializing in AI automation, agentic workflows, and intelligent assistants. I build AI-driven systems that enhance decision-making and streamline operations—from virtual agents and autonomous workflows to smart SaaS applications—driving real-world impact. 🚀
         </p>
 
         <div className="mb-16 flex flex-col gap-4 md:flex-row xl:items-center">
@@ -82,10 +82,12 @@ export default function Hero() {
           width={400}
           height={400}
           className="mx-auto aspect-square w-[300px] rounded-full object-cover lg:w-[400px]"
-          priority
+          // priority
+          // placeholder="blur"
+          // blurDataURL="/placeholder.svg" // Replace with your placeholder image URL
         />
       ) : (
-        <div className="mx-auto aspect-square w-[300px] animate-pulse rounded-full bg-gray-200 lg:w-[500px]" />
+        <div className="mx-auto aspect-square w-[300px] animate-pulse rounded-full bg-gray-200 lg:w-[400px]" />
       )}
     </section>
   );

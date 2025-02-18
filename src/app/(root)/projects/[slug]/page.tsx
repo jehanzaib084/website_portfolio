@@ -44,12 +44,12 @@ export default async function ProjectDetails({ params }: Params) {
               txt={project.tagline}
               className="text-sm font-bold"
             />
-            <h2 className="mt-3 text-[36px] font-bold leading-[120%] md:text-[50px] xl:text-[54px]">
+            <h2 className="mt-3 text-[36px] font-bold leading-[120%] md:text-[50px] xl:text-[54px] text-white">
               {project.title}
             </h2>
           </div>
 
-          <div className="lg:max-w-[50%]">
+          <div className="lg:max-w-[50%] text-white">
             <h4 className="mb-3 text-[19px] font-bold leading-[110%] md:text-2xl">
               Project Overview
             </h4>
@@ -57,7 +57,7 @@ export default async function ProjectDetails({ params }: Params) {
           </div>
         </div>
         <Image src={gradientBG} alt="gradient background" priority />
-        <div className="prose prose-lg prose-blue mx-auto max-w-[800px] pt-[100px] xl:prose-xl lg:pt-[160px]">
+        <div className="prose prose-lg prose-blue mx-auto max-w-[800px] pt-[100px] xl:prose-xl lg:pt-[160px] text-white">
           <PortableText value={project?.content} />
         </div>
 

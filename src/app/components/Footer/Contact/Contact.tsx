@@ -88,7 +88,7 @@ export default function ContactDetails() {
               target="_blank"
               className="text-[17px] font-bold text-[#8a95ad]"
             >
-              officialayo540@gmail.com
+              saniasadaqat3526@gmail.com
             </Link>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function ContactDetails() {
         Copyright &copy; {date}{" "}
         <GradientTxt tagName="span" txt="<ML-Engineer/>." /> all rights reserved.
         Built using NextJS, Typescript, TailwindCSS, Framer motion, Sanity and
-        NodeJS.
+        EmailJS.
       </p>
     </section>
   );

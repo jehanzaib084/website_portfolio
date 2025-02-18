@@ -6,7 +6,7 @@ import ClientContact from "@/app/(root)/contact/client/ClientContact";
 
 export default function Footer() {
   return (
-    <footer className="mt-[80px] bg-black">
+    <footer className="bg-black">
       <div className="container mx-auto px-5 pt-5 lg:px-20">
         <FadeUp tag="div" className="py-20">
           <GradientTxt

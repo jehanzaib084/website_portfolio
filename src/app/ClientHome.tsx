@@ -14,7 +14,7 @@ import AnimatedSlide from "./components/HomeComp/Projects/Swiper";
 
 const Preloader = function () {
   return (
-    <section className="fixed left-0 top-0 inline-flex h-full w-full items-center justify-center bg-[#f3f3f3]">
+    <section className="fixed left-0 top-0 inline-flex h-full w-full items-center justify-center bg-[#121212]">
       <motion.div
         initial={{ y: 100, opacity: 0, rotate: 10 }}
         animate={{ y: 0, opacity: 1, rotate: 0 }}
@@ -65,32 +65,34 @@ export default function ClientHome() {
   }, []);
 
   return (
-    <AnimatePresence mode="wait">
-      {isLoading ? (
-        <Preloader key="preloader" />
-      ) : (
-        <>
-          <Header key="header" />
-          <main key="main">
-            <div className="container mx-auto px-5 pt-5 lg:px-20">
-              <Hero />
-            </div>
-            <div className="container mx-auto px-5 pt-5 lg:px-20">
-              <Services />
-            </div>
-            <div className="bg-black">
-              <div className="container mx-auto pt-5 pb-[140px] lg:pb-[100px]">
-                <Projects />
-                <div className="relative h-[600px]">
-                  <AnimatedSlide />
+    <div className="dark">
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <Preloader key="preloader" />
+        ) : (
+          <>
+            <Header key="header" />
+            <main key="main" className="bg-black text-white">
+              <div className="container mx-auto px-5 pt-5 lg:px-20">
+                <Hero />
+              </div>
+              <div className="container mx-auto px-5 pt-5 lg:px-20">
+                <Services />
+              </div>
+              <div className="bg-black">
+                <div className="container mx-auto pt-5 pb-[140px] lg:pb-[100px]">
+                  <Projects />
+                  <div className="relative h-[600px]">
+                    <AnimatedSlide />
+                  </div>
                 </div>
               </div>
-            </div>
-            <OtherComponents />
-          </main>
-          <Footer key="footer" />
-        </>
-      )}
-    </AnimatePresence>
+              <OtherComponents />
+            </main>
+            <Footer key="footer" />
+          </>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

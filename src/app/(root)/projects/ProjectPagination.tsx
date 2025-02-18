@@ -17,12 +17,12 @@ export const ProjectPagination = ({
   return (
     <ReactPaginate
       previousLabel={
-        <div className="flex size-[51px] items-center justify-center rounded-[8px] border-[0.5px] border-black">
+        <div className="flex size-[51px] items-center justify-center rounded-[8px] border-[0.5px] bg-white border-black">
           <Image src={ChevronLeft} alt="chevron left icon" />
         </div>
       }
       nextLabel={
-        <div className="flex size-[51px] items-center justify-center rounded-[8px] border-[0.5px] border-black">
+        <div className="flex size-[51px] items-center justify-center rounded-[8px] border-[0.5px] bg-white border-black">
           <Image src={ChevronRight} alt="chevron right icon" />
         </div>
       }
@@ -32,10 +32,10 @@ export const ProjectPagination = ({
       pageRangeDisplayed={5}
       onPageChange={onPageChange}
       containerClassName="flex gap-2 items-center justify-center mx-auto mt-8 max-w-[621px]"
-      pageClassName="border-[0.5px] border-black rounded-[8px] size-[51px] flex items-center justify-center"
-      // pageLinkClassName="text-dark-400"
-      activeClassName="bg-black text-white size-[51px] flex items-center justify-center"
-      activeLinkClassName="text-white"
+      pageClassName="border-[0.5px] border-white text-white rounded-[8px] size-[51px] flex items-center justify-center"
+      // pageLinkClassName="text-black"
+      activeClassName="border-[0.5px] border-white bg-white text-black rounded-[8px] size-[51px] flex items-center justify-center"
+      activeLinkClassName="text-black"
       previousClassName="px-3 py-1 rounded hover:bg-blue-50"
       nextClassName="px-3 py-1 rounded hover:bg-blue-50"
       // previousLinkClassName="text-dark-400"

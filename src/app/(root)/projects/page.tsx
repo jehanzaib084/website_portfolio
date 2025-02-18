@@ -5,12 +5,12 @@ import { toast } from "react-toastify";
 import ProjectClient from "./ProjectClient";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "ML and AI Projects",
   description:
-    "Explore my portfolio of projects, ranging from web development and programming to personal growth and industry trends. Stay informed and inspired with my latest work.",
+    "Explore my portfolio of ML and AI projects, showcasing my expertise in machine learning, artificial intelligence, and data science. Stay informed and inspired with my latest work.",
   openGraph: {
     description:
-      "Explore my portfolio of projects, ranging from web development and programming to personal growth and industry trends. Stay informed and inspired with my latest work.",
+      "Explore my portfolio of ML and AI projects, showcasing my expertise in machine learning, artificial intelligence, and data science. Stay informed and inspired with my latest work.",
   },
 };
 

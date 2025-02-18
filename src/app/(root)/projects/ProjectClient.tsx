@@ -23,7 +23,7 @@ export default function ProjectClient({ projects }: { projects: Project[] }) {
   };
 
   return (
-    <section className="py-10 md:py-20">
+    <section className="py-10 md:py-20 bg-black">
       <div className="container mx-auto grid gap-32 px-5 lg:px-20">
         {!projects.length ? (
           <ProjectSkeleton />
@@ -45,7 +45,7 @@ export default function ProjectClient({ projects }: { projects: Project[] }) {
                   </div>
 
                   {/* Content Box */}
-                  <div className="relative md:absolute bg-black p-6 md:p-8 lg:p-10 w-full 
+                  <div className="relative md:absolute bg-white p-6 md:p-8 lg:p-10 w-full 
                     md:w-[90%] lg:w-[500px] 
                     -mt-10 md:mt-0 
                     md:left-[50%] lg:left-[55%] xl:left-[60%]
@@ -55,12 +55,12 @@ export default function ProjectClient({ projects }: { projects: Project[] }) {
                       txt={project.tagline}
                       className="text-sm font-bold tracking-[4px] md:text-base"
                     />
-                    <h2 className="my-4 md:my-6 text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                    <h2 className="my-4 md:my-6 text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
                       {project.title}
                     </h2>
                     <CustomNav
                       txt="View Project"
-                      className="flex items-center gap-2 text-sm md:text-base text-white mt-4"
+                      className="flex items-center gap-2 text-sm md:text-base text-black mt-4"
                     />
                   </div>
                 </div>
