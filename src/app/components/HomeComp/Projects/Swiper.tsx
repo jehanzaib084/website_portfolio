@@ -86,7 +86,7 @@ export default function AnimatedSlide() {
                   className="object-cover transition-transform duration-300 group-hover:scale-[1.1]"
                 />
               </div>
-              <div className="bg-white dark:text-black p-10">
+              <div className="bg-white text-black p-10">
                 <GradientTxt
                   txt={project.title}
                   className="text-[14px] font-bold tracking-[4px]"
