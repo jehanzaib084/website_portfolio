@@ -1,8 +1,7 @@
 import { MetadataRoute } from "next";
-import { getArticles, getProjects } from "../../sanity/sanity-utils";
+import { getProjects } from "../../sanity/sanity-utils";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const articles = await getArticles();
   const projects = await getProjects();
 
   // static pages
@@ -20,20 +19,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-
-    {
-      url: `${process.env.NEXT_PUBLIC_LIVE_URL}/articles`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.5,
-    },
-
-    {
-      url: `${process.env.NEXT_PUBLIC_LIVE_URL}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.5,
-    },
   ];
 
   // dynamic project pages
@@ -44,13 +29,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // dynamic article pages
-  const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
-    url: `${process.env.NEXT_PUBLIC_LIVE_URL}/articles/${article.slug}`,
-    lastModified: new Date(article._createdAt),
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
-  return [...staticPages, ...projectPages, ...articlePages];
+  return [...staticPages, ...projectPages];
 }
