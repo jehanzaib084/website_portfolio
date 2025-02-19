@@ -82,9 +82,9 @@ export default function Hero() {
           width={400}
           height={400}
           className="mx-auto aspect-square w-[300px] rounded-full object-cover lg:w-[400px]"
-          // priority
-          // placeholder="blur"
-          // blurDataURL="/placeholder.svg" // Replace with your placeholder image URL
+          priority
+          placeholder="blur"
+          blurDataURL="/placeholder.svg" // Replace with your placeholder image URL
         />
       ) : (
         <div className="mx-auto aspect-square w-[300px] animate-pulse rounded-full bg-gray-200 lg:w-[400px]" />
