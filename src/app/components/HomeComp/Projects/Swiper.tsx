@@ -106,7 +106,7 @@ export default function AnimatedSlide() {
 
       <div className="absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 flex items-center gap-4">
         <div
-          className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center bg-white dark:bg-black dark:border dark:border-white"
+          className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center bg-black border border-white"
           onClick={() => sliderRef.current?.slickPrev()}
         >
           <svg
@@ -125,7 +125,7 @@ export default function AnimatedSlide() {
         </div>
 
         <div
-          className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center bg-white dark:bg-black dark:border dark:border-white"
+          className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center bg-black border border-white"
           onClick={() => sliderRef.current?.slickNext()}
         >
           <svg
