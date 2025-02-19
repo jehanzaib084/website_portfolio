@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from 'react';
 import CustomBtn from "./Reusables/CustomBtn";
 import GradientTxt from "./Reusables/GradientTxt";
 import Image from "next/image";
@@ -9,6 +10,17 @@ import { useEffect, useState } from "react";
 import { Profile } from "../../../types/Profile";
 import { getProfile } from "../../../sanity/sanity-utils";
 import { toast } from "react-toastify";
+
+// Memoize the hero text to prevent unnecessary re-renders
+const HeroText = memo(() => (
+  <p className="mb-16 text-[19px] text-[#EEEEEE] lg:text-[22px]">
+    Hi! I'm Sania, an AI & ML Engineer specializing in AI automation, agentic workflows, 
+    and intelligent assistants. I build AI-driven systems that enhance decision-making 
+    and streamline operations—from virtual agents and autonomous workflows to smart SaaS 
+    applications—driving real-world impact. 🚀
+  </p>
+));
+HeroText.displayName = 'HeroText';
 
 export default function Hero() {
   const MotionImage = motion(Image);
@@ -36,12 +48,10 @@ export default function Hero() {
       >
         <h1 className="mb-4 text-[40px] font-bold leading-[110%] md:text-[68px] lg:text-[70px]">
           <GradientTxt tagName="span" txt="AI That Works Smarter," />
-          So You Don’t Have To.
+          So You Don't Have To.
         </h1>
 
-        <p className="mb-16 text-[19px] text-[#EEEEEE] lg:text-[22px]">
-          Hi! I'm Sania, an AI & ML Engineer specializing in AI automation, agentic workflows, and intelligent assistants. I build AI-driven systems that enhance decision-making and streamline operations—from virtual agents and autonomous workflows to smart SaaS applications—driving real-world impact. 🚀
-        </p>
+        <HeroText />
 
         <div className="mb-16 flex flex-col gap-4 md:flex-row xl:items-center">
           <CustomBtn

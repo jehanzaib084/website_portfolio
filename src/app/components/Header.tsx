@@ -21,7 +21,12 @@ export default function Header({}: HeaderProps) {
         </Link>
 
         {/* hamburger menu */}
-        <button className="z-50 lg:hidden" onClick={() => setIsNavClicked(!isNavClicked)}>
+        <button className="z-50 lg:hidden" 
+          onClick={() => setIsNavClicked(!isNavClicked)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isNavClicked}
+          aria-controls="mobile-menu"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -80,6 +85,7 @@ export default function Header({}: HeaderProps) {
         {/* nav menu */}
 
         <motion.div
+          id="mobile-menu"
           initial={{
             height: 0,
             zIndex: "-5",
