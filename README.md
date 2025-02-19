@@ -30,9 +30,9 @@
   - Typescript
   - Tailwind
 
-- Backend
+- Contact Form
 
-  - NodeJS (for handling contact form submissions)
+  - EmailJs (for handling contact form submissions)
 
 - Content Management
 

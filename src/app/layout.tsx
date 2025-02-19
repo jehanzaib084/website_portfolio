@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Plus_Jakarta_Sans, Dancing_Script } from "next/font/google";
 import { seoKeywords } from "./seoKeywords";
+
+
+const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--plus-jakarta-display" });
+const dancingScript = Dancing_Script({ subsets: ["latin"], variable: "--dancing-script" });
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_LIVE_URL as string),
@@ -19,7 +25,7 @@ export const metadata: Metadata = {
     images: [
       new URL("/opengraphImg.png", process.env.NEXT_PUBLIC_LIVE_URL as string)
         .href,
-    ], // image to be shown of website when linked to different sources
+    ],
   },
 };
 
@@ -33,7 +39,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.png" sizes="32" />
       </head>
-      <body suppressHydrationWarning>
+      <body className={`${plusJakarta.variable} ${dancingScript.variable}`} suppressHydrationWarning>
         {children}
         <ToastContainer />
       </body>
