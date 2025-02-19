@@ -28,13 +28,13 @@ export default function Services() {
     <section id="services" className="mb-[80px]">
       <FadeUp tag="div" className="mb-16">
         <GradientTxt
-          tagName="h6"
+          tagName="h2"
           txt="SERVICES"
           className="mb-4 text-center text-[22px] font-bold"
         />
-        <h2 className="mx-auto mb-10 max-w-[800px] text-center text-[36px] font-bold leading-[120%] tracking-[0.5px] lg:text-[54px]">
+        <h3 className="mx-auto mb-10 max-w-[800px] text-center text-[36px] font-bold leading-[120%] tracking-[0.5px] lg:text-[54px]">
           Code that solves problems, one product at a time.
-        </h2>
+        </h3>
       </FadeUp>
 
       <FadeUp
@@ -50,10 +50,10 @@ export default function Services() {
               alt={service.alt}
               priority
             />
-            <h6 className="my-4 mb-6 text-[19px] font-bold leading-[110%] lg:mt-10">
+            <h4 className="my-4 mb-6 text-[19px] font-bold leading-[110%] lg:mt-10">
               {service.title}
-            </h6>
-            <p className="mb-4 leading-[22px] text-[#666]">
+            </h4>
+            <p className="mb-4 leading-[22px] text-[#EEEEEE]">
               {service.description}
             </p>
             <ul className="inline-flex flex-col gap-3 pl-5 md:pl-0">

@@ -11,13 +11,13 @@ export default function Projects() {
       >
         <div>
           <GradientTxt
-            tagName="h6"
+            tagName="h2"
             txt="PROJECTS"
             className="mb-4 text-center text-[22px] font-bold"
           />
-          <h2 className="mx-auto text-white mb-10 max-w-[600px] text-[36px] font-bold leading-[120%] tracking-[0.5px] lg:text-[54px]">
+          <h3 className="mx-auto text-white mb-10 max-w-[600px] text-[36px] font-bold leading-[120%] tracking-[0.5px] lg:text-[54px]">
             Innovative side projects
-          </h2>
+          </h3>
         </div>
 
         <CustomBtn

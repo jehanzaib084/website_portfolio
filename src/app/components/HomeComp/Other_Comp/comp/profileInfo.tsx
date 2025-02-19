@@ -26,7 +26,7 @@ export default function ProfileInfo() {
             That's me!
           </h2>
         </div>
-        <p className="text-[19px] leading-[40px] text-[#666] md:text-[22px] lg:max-w-[50%]">
+        <p className="text-[19px] leading-[40px] text-[#EEEEEE] md:text-[22px] lg:max-w-[50%]">
           Over the past 4 years, I've collaborated with a diverse range of
           clients, from startups to established businesses. I bring a passion
           for creating seamless digital experiences and solving complex problems

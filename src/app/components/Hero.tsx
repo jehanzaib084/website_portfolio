@@ -39,25 +39,29 @@ export default function Hero() {
           So You Don’t Have To.
         </h1>
 
-        <p className="mb-16 text-[19px] text-[#666] lg:text-[22px]">
+        <p className="mb-16 text-[19px] text-[#EEEEEE] lg:text-[22px]">
           Hi! I'm Sania, an AI & ML Engineer specializing in AI automation, agentic workflows, and intelligent assistants. I build AI-driven systems that enhance decision-making and streamline operations—from virtual agents and autonomous workflows to smart SaaS applications—driving real-world impact. 🚀
         </p>
 
         <div className="mb-16 flex flex-col gap-4 md:flex-row xl:items-center">
-          <CustomBtn txt="Book a call" className="w-[150px]" href="/#contact" />
+          <CustomBtn
+            txt="Book a call"
+            className="w-full min-h-[44px] px-6 py-3 md:w-[180px]"
+            href="/#contact"
+          />
           {profile?.resume && (
             <Link
               href={profile.resume}
               target="_blank"
               rel="noopener noreferrer"
               download="Sania_Resume.pdf"
-              className="group flex cursor-pointer items-center gap-2 text-lg font-bold"
+              className="group flex cursor-pointer items-center gap-3 text-lg font-bold min-h-[44px] px-4 py-2"
             >
               <span>Download CV</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="24"
+                height="24" 
                 fill="currentColor"
                 className="bi bi-arrow-right transition-transform duration-500 group-hover:translate-x-3"
                 viewBox="0 0 16 16"

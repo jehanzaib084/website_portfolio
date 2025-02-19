@@ -43,7 +43,7 @@ export default function AnimatedSlide() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    arrows: false, // Disable default arrows
+    arrows: false,
     responsive: [
       {
         breakpoint: 1200,
@@ -73,17 +73,17 @@ export default function AnimatedSlide() {
           projects.map((project) => (
             <div
               key={project._id}
-              className="group md:min-w-[400px] p-2" // Add padding for margin between slides
+              className="group md:min-w-[400px] p-2"
               onClick={() => handleNavigation(project.slug)}
             >
-              <div className="w-full overflow-hidden">
+              <div className="relative w-full aspect-[431/273] overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.alt}
-                  width={400}
-                  height={350}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
-                  className="w-full transition-transform duration-300 group-hover:scale-[1.1] md:max-h-[273px]"
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.1]"
                 />
               </div>
               <div className="bg-white dark:text-black p-10">
