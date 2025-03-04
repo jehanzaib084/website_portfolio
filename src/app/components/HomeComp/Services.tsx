@@ -42,7 +42,7 @@ export default function Services() {
 
       <FadeUp
         tag="div"
-        className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4"
       >
         {isLoading ? (
           // Skeleton loader with same dimensions as content
