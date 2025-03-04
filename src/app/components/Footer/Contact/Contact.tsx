@@ -25,12 +25,7 @@ export default function ContactDetails() {
       name: "Contact",
       path: "/#contact",
     },
-
-    // {
-    //   name: "Articles",
-    //   path: "/articles",
-    // },
-
+    
     {
       name: "Projects",
       path: "/projects",

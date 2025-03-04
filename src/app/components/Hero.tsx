@@ -98,10 +98,10 @@ export default function Hero() {
           className="mx-auto aspect-square w-[300px] rounded-full object-cover lg:w-[400px]"
           priority
           placeholder="blur"
-          blurDataURL="/placeholder.svg" // Replace with your placeholder image URL
+          blurDataURL="/placeholder.svg"
         />
       ) : (
-        <div className="mx-auto aspect-square w-[300px] animate-pulse rounded-full bg-gray-200 lg:w-[400px]" />
+        <div className="mx-auto aspect-square w-[300px] animate-pulse rounded-full bg-gray-200 lg:w-[1500px]" />
       )}
     </section>
   );
