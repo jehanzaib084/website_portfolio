@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_LIVE_URL as string),
   keywords: seoKeywords,
   title: {
-    default: "Home | <ReactMode />",
-    template: "%s | <ReactMode />",
+    default: "Home",
+    template: "%s",
   },
   description:
     "Welcome to my professional portfolio repository! This project showcases my journey, skills, and projects as a fullstack developer. It serves as a central repository for all my work, experiences, and achievements in web development.",
